@@ -184,5 +184,7 @@ While I created the mains supply splitter, I tested everything extensively with 
 **Claude:** Boilerplate and syntax on the capture, extraction and firmware scripts, the initial circuit topology, and answering some physics questions I was interested in.
 
 ## <a id="full-demo"></a>Full uncut demo
-https://github.com/user-attachments/assets/1edb2886-8c8b-442c-a528-c2231a2cd9a5
+
+https://github.com/user-attachments/assets/5d3ee083-829e-4f6d-aea4-8c1020c38e03
+
 _Pardon the MASSIVE fright I got when I picked up the Nutribullet._
