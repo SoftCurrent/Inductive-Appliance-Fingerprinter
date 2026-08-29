@@ -8,11 +8,11 @@
 
 **Stage 2:** feature extraction and a live classifier. ✓
 
-**Stage 3:** more devices, a voltage channel, and on-device inference.
- 
-<img width="820" height="627" alt="Screenshot 2026-08-24 at 6 18 24 PM" src="https://github.com/user-attachments/assets/604869b9-8c4c-4be2-9254-c9c67c4d7755" />
+**Stage 3:** permanent perfboard build ✓
 
-_Image of Appliance-Fingerprinter_
+S1 Initial Build           |  S3 Completed Perfboard
+:-------------------------:|:-------------------------:
+<img width="820" height="627" alt="Screenshot 2026-08-24 at 6 18 24 PM" src="https://github.com/user-attachments/assets/604869b9-8c4c-4be2-9254-c9c67c4d7755" />  |  <img width="619" height="736" alt="Screenshot 2026-08-29 at 11 41 57 AM" src="https://github.com/user-attachments/assets/867ff7a5-a2ca-4651-8b6b-ebdfb1fb4d9d" />
  
 ## Why
 Appliances have distinguishable current signatures because their internals determine when in the cycle they draw current. For example, a lightbulb/toaster's resistive load is different to a blender motor's initial spike in current draw to spin up the blades. To achieve an intelligent smart home system, we would use AI to "guess" at what appliances are plugged in and are being used at certain times. That way, humans do not need to tell apps what is plugged in where, but rather the home itself will just know. Additionally, the current signature can provide an insight into the health of the appliances over time - which could provide early warnings to users of appliance faults.
@@ -30,8 +30,6 @@ Stage 1 could measure a current waveform. Stage 2 now is able to identify what t
 https://github.com/user-attachments/assets/42ddbc00-b4f7-4605-9eaf-e81dae3ee175
 
 _Short video demo of system classifying a toaster and a blender_
-
-_Skeptical?_ [Jump to the full uncut demo of all four appliances.](#full-demo)
 
 I trained it on four devices (kinda): a Nutribullet blender, a Dyson hairdryer on its cool setting, the same Dyson on hot, and a toaster. Keep in mind: the two Dyson modes are the same physical device.
  
@@ -182,9 +180,3 @@ While I created the mains supply splitter, I tested everything extensively with 
 **Me:** Every design decision: the 220Ω burden, the capacitors on the reference node, a random forest over boosting, cross-validation over a single split. All the debugging: the 790Ω divider that was really the ESP32's supply in parallel, the dead jumper faking a broken clamp, and proving the noise floor was the ADC, not pickup. And the classifier model end to end, from StatQuest and the scikit-learn docs.
 
 **Claude:** Boilerplate and syntax on the capture, extraction and firmware scripts, the initial circuit topology, and answering some physics questions I was interested in.
-
-## <a id="full-demo"></a>Full uncut demo
-
-https://github.com/user-attachments/assets/5d3ee083-829e-4f6d-aea4-8c1020c38e03
-
-_Pardon the MASSIVE fright I got when I picked up the Nutribullet._
