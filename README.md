@@ -175,6 +175,9 @@ Stage 2 is working really well. Stage 3 is about making it robust and general: m
 ## Safety Note
 While I created the mains supply splitter, I tested everything extensively with a multimeter before plugging it into the mains supply. There are no open areas to the mains supply to touch on this design. In the tiny case someone might decide to build something similar based on this repo, I would suggest being extremely cautious when dealing with mains power.
 
+## Running it
+The recordings are in data.zip. Unzip it in the repo folder (it creates data/), then run python classifier.py.
+
 ## Use of AI in this project
 
 **Me:** Every design decision: the 220Ω burden, the capacitors on the reference node, a random forest over boosting, cross-validation over a single split. All the debugging: the 790Ω divider that was really the ESP32's supply in parallel, the dead jumper faking a broken clamp, and proving the noise floor was the ADC, not pickup. And the classifier model end to end, from StatQuest and the scikit-learn docs.
